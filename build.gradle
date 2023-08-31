@@ -9,7 +9,7 @@ plugins {
 }
 
 java {
-    withJavadocJar()
+    //withJavadocJar()
     withSourcesJar()
 }
 
@@ -23,8 +23,8 @@ repositories {
 
 
 sourceCompatibility = 11
-group = 'io.github.mderevyankoaqa'
-version = '2.6'
+group = 'io.github.mateusgsan'
+version = '2.7'
 
 def title = 'JMeterInfluxDB2Listener'
 def archiveName = 'jmeter-plugins-influxdb2-listener'
@@ -42,13 +42,13 @@ def archiveName = 'jmeter-plugins-influxdb2-listener'
     }
 
     dependencies {
-        implementation group: 'org.apache.jmeter', name: 'ApacheJMeter_core', version: '5.6'
-        implementation group: 'org.apache.jmeter', name: 'ApacheJMeter_java', version: '5.6'
-        implementation group: 'org.apache.jmeter', name: 'ApacheJMeter_components', version: '5.6'
-        implementation group: 'org.apache.jmeter', name: 'jorphan', version: '5.6'
+        implementation group: 'org.apache.jmeter', name: 'ApacheJMeter_core', version: '5.6.2'
+        implementation group: 'org.apache.jmeter', name: 'ApacheJMeter_java', version: '5.6.2'
+        implementation group: 'org.apache.jmeter', name: 'ApacheJMeter_components', version: '5.6.2'
+        implementation group: 'org.apache.jmeter', name: 'jorphan', version: '5.6.2'
         implementation group: 'com.influxdb', name: 'influxdb-client-java', version: '6.9.0'
         implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.12.0'
-        implementation group: 'org.apache.jmeter', name: 'ApacheJMeter_http', version: '5.6'
+        implementation group: 'org.apache.jmeter', name: 'ApacheJMeter_http', version: '5.6.2'
         components {
             withModule("org.apache.jmeter:ApacheJMeter_core", JMeterRule)
             withModule("org.apache.jmeter:ApacheJMeter_java", JMeterRule)
@@ -92,7 +92,7 @@ shadowJar {
 publishing {
     publications {
         mavenJava(MavenPublication) {
-            groupId = 'io.github.mderevyankoaqa'
+            groupId = 'io.github.mateusgsan'
             artifactId = archiveName
             version = version
 
@@ -108,7 +108,7 @@ publishing {
             pom {
                 name = archiveName
                 description = 'Influx DB v2.0 listener plugin for Apache JMeter. Provides the possibility to see the online dashboard (aggregation table, errors, the response body of failures).'
-                url = 'https://github.com/mderevyankoaqa/jmeter-influxdb2-listener-plugin'
+                url = 'https://github.com/mateusgsan/jmeter-influxdb2-listener-plugin'
 
                 licenses {
                     license {
@@ -150,9 +150,9 @@ publishing {
 
                 }
                 scm {
-                    connection = 'scm:git:git:github.com/mderevyankoaqa/jmeter-influxdb2-listener-plugin.git'
-                    developerConnection = 'scm:git:ssh://github.com/mderevyankoaqa/jmeter-influxdb2-listener-plugin.git'
-                    url = 'https://github.com/mderevyankoaqa/jmeter-influxdb2-listener-plugin'
+                    connection = 'scm:git:git:github.com/mateusgsan/jmeter-influxdb2-listener-plugin.git'
+                    developerConnection = 'scm:git:ssh://github.com/mateusgsan/jmeter-influxdb2-listener-plugin.git'
+                    url = 'https://github.com/mateusgsan/jmeter-influxdb2-listener-plugin'
                 }
             }
         }
@@ -175,6 +175,7 @@ publishing {
 
 
 signing {
+	useGpgCmd()
     sign publishing.publications.mavenJava
 }
 
