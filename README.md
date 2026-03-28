@@ -3,19 +3,19 @@
 
 
 <p align="left">
-<img src="https://img.shields.io/github/license/mderevyankoaqa/jmeter-influxdb2-listener-plugin?style=plastic">
-<img src ="https://img.shields.io/github/v/release/mderevyankoaqa/jmeter-influxdb2-listener-plugin?style=plastic">
-<img src="https://img.shields.io/maven-central/v/io.github.mderevyankoaqa/jmeter-plugins-influxdb2-listener?style=plastic">
-<img src="https://img.shields.io/github/downloads/mderevyankoaqa/jmeter-influxdb2-listener-plugin/total?style=plastic">
-<img src="https://img.shields.io/github/stars/mderevyankoaqa/jmeter-influxdb2-listener-plugin?style=plastic&color=gold">
-<img src="https://img.shields.io/github/forks/mderevyankoaqa/jmeter-influxdb2-listener-plugin?style=plastic">
+<img src="https://img.shields.io/github/license/mateusgsan/jmeter-influxdb2-listener-plugin?style=plastic">
+<img src ="https://img.shields.io/github/v/release/mateusgsan/jmeter-influxdb2-listener-plugin?style=plastic">
+<img src="https://img.shields.io/maven-central/v/io.github.mateusgsan/jmeter-plugins-influxdb2-listener?style=plastic">
+<img src="https://img.shields.io/github/downloads/mateusgsan/jmeter-influxdb2-listener-plugin/total?style=plastic">
+<img src="https://img.shields.io/github/stars/mateusgsan/jmeter-influxdb2-listener-plugin?style=plastic&color=gold">
+<img src="https://img.shields.io/github/forks/mateusgsan/jmeter-influxdb2-listener-plugin?style=plastic">
 <br>
-<img src="https://img.shields.io/github/repo-size/mderevyankoaqa/jmeter-influxdb2-listener-plugin?style=plastic">
-<img src="https://img.shields.io/github/issues/detail/age/mderevyankoaqa/jmeter-influxdb2-listener-plugin/1?style=plastic&color=purple">
-<img src="https://img.shields.io/github/commit-activity/m/mderevyankoaqa/jmeter-influxdb2-listener-plugin?style=plastic&color=red">
-<img src="https://img.shields.io/github/contributors/mderevyankoaqa/jmeter-influxdb2-listener-plugin?style=plastic">
-<img src="https://img.shields.io/github/last-commit/mderevyankoaqa/jmeter-influxdb2-listener-plugin?style=plastic">
-<img src="https://badgen.net/github/closed-issues/mderevyankoaqa/jmeter-influxdb2-listener-plugin">
+<img src="https://img.shields.io/github/repo-size/mateusgsan/jmeter-influxdb2-listener-plugin?style=plastic">
+<img src="https://img.shields.io/github/issues/detail/age/mateusgsan/jmeter-influxdb2-listener-plugin/1?style=plastic&color=purple">
+<img src="https://img.shields.io/github/commit-activity/m/mateusgsan/jmeter-influxdb2-listener-plugin?style=plastic&color=red">
+<img src="https://img.shields.io/github/contributors/mateusgsan/jmeter-influxdb2-listener-plugin?style=plastic">
+<img src="https://img.shields.io/github/last-commit/mateusgsan/jmeter-influxdb2-listener-plugin?style=plastic">
+<img src="https://badgen.net/github/closed-issues/mateusgsan/jmeter-influxdb2-listener-plugin">
 </p>
 
 <h3> 
@@ -32,7 +32,7 @@
 <summary>Like what you see? 😍 </summary>
 <br>
    <a href="https://www.buymeacoffee.com/mvderevyanko">
-   <img alt="Coffee2" src="https://raw.githubusercontent.com/mderevyankoaqa/jmeter-elk/main/img/Coffee2.png"  width="150">
+   <img alt="Coffee2" src="https://raw.githubusercontent.com/mateusgsan/jmeter-elk/main/img/Coffee2.png"  width="150">
 </a>
 </h3>
 
@@ -48,13 +48,13 @@ The plugin sends metrics to InfluxDB and provides the possibility to visualize t
 * Latency;
 * The response time (uses from the SampleResult.class, needs to make aggregate report).
 
-Notes: if you need to save the errors you got wile the test to csv like file and then share to the dev team you can use the [jmeter-csv-listener-plugin](https://github.com/mderevyankoaqa/jmeter-csv-listener-plugin).
+Notes: if you need to save the errors you got wile the test to csv like file and then share to the dev team you can use the [jmeter-csv-listener-plugin](https://github.com/mateusgsan/jmeter-csv-listener-plugin).
 This plugin can be used while the functional testing and load tests as well.
 
 ## Important notes
 🚨 The plugin allows 5 errors happened one by one, then plugin will stop importing the results after that! See details in the logs.
 Counter will be refreshed at least you have 4 fails. This is protection to avoid OOM error.
-The option can be configured in the settings (the key name is `influxDBThresholdError` see the [Plugin configuration](https://github.com/mderevyankoaqa/jmeter-influxdb2-listener-plugin/tree/main#plugin-configuration) for the details). You need to be careful with that option and know the hardware resources to store data in the memory.
+The option can be configured in the settings (the key name is `influxDBThresholdError` see the [Plugin configuration](https://github.com/mateusgsan/jmeter-influxdb2-listener-plugin/tree/main#plugin-configuration) for the details). You need to be careful with that option and know the hardware resources to store data in the memory.
 
 Pleas monitor the elapsed time of the data importing (see logs) to avoid issues with requests sending from JMeter.
 Pay attention on "Sending metrics performance tuning" chapter, see below.
@@ -91,7 +91,7 @@ Hello all contributors! Welcome to the project, I'm happy to see you here. Just 
    b. all pull requests from your feature branch -> "development" branch only.
    c. once we decide to make the new release after testing, we will merge "development" -> "main" with push to maven central.
 
-While the first pull request please add your self to the [build.gradle](https://github.com/mderevyankoaqa/jmeter-influxdb2-listener-plugin/blob/main/build.gradle) the section 'developers'
+While the first pull request please add your self to the [build.gradle](https://github.com/mateusgsan/jmeter-influxdb2-listener-plugin/blob/main/build.gradle) the section 'developers'
 
     developers {
         developer {
@@ -101,7 +101,7 @@ While the first pull request please add your self to the [build.gradle](https://
         }
 
 ## Deployment
-* Put '`jmeter-plugin-influxdb2-listener-<version>.jar`' file from [Releases](https://github.com/mderevyankoaqa/jmeter-influxdb2-listener-plugin/releases) to `~<JmeterPath<\lib\ext`;
+* Put '`jmeter-plugin-influxdb2-listener-<version>.jar`' file from [Releases](https://github.com/mateusgsan/jmeter-influxdb2-listener-plugin/releases) to `~<JmeterPath<\lib\ext`;
 
 Note: "fatJar" gradle task should be used to create the package for the JMeter.
 
@@ -115,14 +115,14 @@ Note: "fatJar" gradle task should be used to create the package for the JMeter.
 
   ![](img/testPlan.png)
 
-* Select from the dropdown item with the name '`io.github.mderevyankoaqa.influxdb2.visualizer.JMeterInfluxDBBackendListenerClient`'.
+* Select from the dropdown item with the name '`io.github.mateusgsan.influxdb2.visualizer.JMeterInfluxDBBackendListenerClient`'.
 
   ![](img/deploy3.png)
 
 ## Upgrade
 * Close JMeter if its started.
 * Remove old jar.
-* Put '`jmeter-plugin-influxdb2-listener-<version>.jar`' file from [Releases](https://github.com/mderevyankoaqa/jmeter-influxdb2-listener-plugin/releases) to `~<JmeterPath<\lib\ext`;
+* Put '`jmeter-plugin-influxdb2-listener-<version>.jar`' file from [Releases](https://github.com/mateusgsan/jmeter-influxdb2-listener-plugin/releases) to `~<JmeterPath<\lib\ext`;
 * Run JMeter again and got Listener.
 * Select from the dropdown item with the name '`io.github.mderevyankoaqa.influxdb2.visualizer.JMeterInfluxDBBackendListenerClient`'.
 
@@ -157,7 +157,7 @@ Let’s explain the plugin fields:
 
 * `influxDBFlushInterval` - its interval to send data to InfluxDB, the default value is 4000 (4 seconds).
 * `influxDBMaxBatchSize` - the max size of the batch with metrics, the default 2000 (2000 items of JMeter results).
-* `influxDBThresholdError` - the error threshold before stopping the import, the default value is 5. (see [Important notes](https://github.com/mderevyankoaqa/jmeter-influxdb2-listener-plugin/tree/main#important-notes) for more detail.)
+* `influxDBThresholdError` - the error threshold before stopping the import, the default value is 5. (see [Important notes](https://github.com/mateusgsan/jmeter-influxdb2-listener-plugin/tree/main#important-notes) for more detail.)
 * `influxDBBucket` - the InfluxDB bucket name to store the test results.
 * `samplersList` - the regex value to sort out the JMeter samplers results; the default is _`.*`_. For example if you have the pattern of JMeter test plan development like this - create the 'Transaction controller', add inside of the 'Transaction controller' the Sampler with request, and the name pattern '`GET->Something`', like on the see screen below.
   The regex `^(Home Page|Login|Search)(-success|-failure)?$` can be used to save only samplers names. The regex can be generated from JMeter menu.
